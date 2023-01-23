@@ -24,14 +24,18 @@ public class Driver {
                 case "chrome":
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
+                    break;
 
                 case "firefox":
                 WebDriverManager.chromedriver().setup();
                 driver = new FirefoxDriver();
+                    break;
 
                 case "safari":
                 WebDriverManager.chromedriver().setup();
                 driver = new SafariDriver();
+                    break;
+                default:
             }
 
                 driver.manage().window().maximize();

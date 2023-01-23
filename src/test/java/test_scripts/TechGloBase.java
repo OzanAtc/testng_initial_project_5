@@ -23,6 +23,11 @@ public class TechGloBase {
         driver = Driver.getDriver();
         driver.get(ConfigReader.getProperty("appURL"));
         techGloBasePage = new TechGloBasePage();
+        techGlo_frontEndPage = new TechGlo_FrontEndPage();
+        techGlo_loginFormPage = new TechGlo_LoginFormPage();
+
+        techGlo_frontEndPage.getFrondEndPage();
+        techGlo_frontEndPage.clickOnCard(15 );
     }
 
     @AfterMethod

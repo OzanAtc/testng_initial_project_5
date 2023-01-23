@@ -9,16 +9,11 @@ import pages.TechGlo_LoginFormPage;
 
 public class TechGlo_LoginFormCardValidation extends TechGloBase{
 
-    @BeforeMethod
-    public void setPage() {
-        techGlo_frontEndPage = new TechGlo_FrontEndPage();
-        techGlo_loginFormPage= new TechGlo_LoginFormPage();
-    }
 
     @Test(priority = 1, description = "Login Form Card Validation")
     public void loginFormCardValidation() {
         techGlo_frontEndPage.getFrondEndPage();
-        techGlo_frontEndPage.clickOnCard(16);
+        techGlo_frontEndPage.clickOnCard(15);
         Assert.assertTrue(techGlo_loginFormPage.headingForLoginForm.isDisplayed());
 
         for (int i = 0; i < techGlo_loginFormPage.loginFormLabelsForUserNameAndPassword.size(); i++) {
@@ -31,6 +26,7 @@ public class TechGlo_LoginFormCardValidation extends TechGloBase{
             Assert.assertTrue(techGlo_loginFormPage.loginFormInputBoxForUserNameAndPassword.get(i).isDisplayed());
         }
 
-
+          Assert.assertTrue(techGlo_loginFormPage.loginButton.isDisplayed());
+          Assert.assertTrue(techGlo_loginFormPage.forgetPasswordLink.isDisplayed());
     }
 }
